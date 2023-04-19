@@ -66,6 +66,16 @@ endif
 # Restore local path
 LOCAL_PATH := $(SDL_IMAGE_LOCAL_PATH)
 
+# ----------------------------------------
+# Add SDL2
+# ----------------------------------------
+include $(CLEAR_VARS)
+LOCAL_MODULE := SDL2
+LOCAL_SRC_FILES := ../SDL/libs/$(TARGET_ARCH_ABI)/libSDL2.so
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../SDL/include
+include $(PREBUILT_SHARED_LIBRARY)
+# ----------------------------------------
+
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := SDL2_image
