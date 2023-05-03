@@ -1,5 +1,6 @@
 obj/
 libs/
+build/
 
 autom4te*
 config.cache
